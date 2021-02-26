@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ForumTestDAL",
+    "\\ForumTestDAL\\EF",
+    "\\ForumTestDAL\\Repositories",
+    "\\ForumTestDAL\\Repositories\\General"
+  ],
+  "SelectedNode": "\\ForumTestDAL\\ForumTestDAL.csproj",
+  "PreviewInSolutionExplorer": false
+}

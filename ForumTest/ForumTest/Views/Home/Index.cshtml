@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Home";
+}
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="jumbotron">
+                    <h1>Форум!<br /></h1>
+                    <p>
+                        Форум створений для початківців та професіоналів, студентів, для всіх, хто програмує!
+                        <br />
+                        У вас є питання? Ласкаво просимо!
+                    </p>
+
+                    @if (Request.IsAuthenticated && User.IsInRole("User"))
+                    {
+                        <p>
+                            <a class="btn btn-default" href="@Url.Action("Create", "Topic")"><span class="fa fa-question"></span>Just Ask</a>
+                        </p>
+                    }
+                    else
+                    {
+                        <p>Увійдіть, щоб розпочати!</p>
+                        <p>
+                            <a class="btn btn-default" href="@Url.Action("Login", "Account")"><span class="fa fa-sign-in"></span> Sign in</a>
+                            <a class="btn btn-default" href="@Url.Action("Register", "Account")">Register</a>
+                        </p>
+                    }
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
